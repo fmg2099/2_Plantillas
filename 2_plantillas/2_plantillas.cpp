@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include "Pair.h"
+#include "MiVector2.h"
 
 
 template <typename T> 
@@ -85,15 +87,42 @@ int main()
     char* s1 = (char*)"hola";
     char* s2 = (char*)"mundo";
 
-    if (lessthan(s1, s2))
+    if (lessthan  (s1, s2))
     {
-        std::cout << "menor que";
+        std::cout << "menor que\n";
     }
     else
     {
-        std::cout << "mayor que";
+        std::cout << "mayor que\n";
     }
 
+
+    //seccion de prueba de clase Pair
+    Pair<int>* parA = new Pair<int>(); 
+    parA->name = "Player1";
+    parA->value = 53;
+
+    Pair<double>* parB = new Pair<double>();
+    parB->name = "Player2";
+    parB->value = 234.67636357;
+
+    Pair<std::string>* parDeStrings = new Pair<std::string>();
+    parDeStrings->name = "hola";
+    parDeStrings->value = "mundo";
+
+    parA->print();
+    parB->print();
+    parDeStrings->print();
+
+    //ejemplo de vectores
+    MiVector2<float> *v1 = new MiVector2<float>();
+    v1->x = 78.2345;
+    v1->y = 43.213;
+
+    std::cout << "velocidad: (" << v1->x << "," << v1->y << "), rapidez=" << v1->sqrMagnitude() << std::endl;
+
+    MiVector2<float>* v2 = new MiVector2<float>(4, 3);
+    std::cout << "velocidad: (" << v2->x << "," << v2->y << "), rapidez=" << v2->sqrMagnitude() << std::endl;
 
 }
 

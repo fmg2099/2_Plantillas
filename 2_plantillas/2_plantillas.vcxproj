@@ -128,6 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2_plantillas.cpp" />
+    <ClCompile Include="MiVector2.cpp" />
+    <ClCompile Include="Pair.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MiVector2.h" />
+    <ClInclude Include="Pair.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
